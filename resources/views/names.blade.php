@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    @foreach ($clientes as $cliente)
-    <h2>{{$cliente}}</h2>
+    @foreach ($names as $name)
+    <h2>{{$name}}</h2>
     @endforeach
 </body>
 </html>
