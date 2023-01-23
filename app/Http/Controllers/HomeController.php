@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function name(){
-        $names = ['Andre,','Joao'];
-        return view('names', compact('names'));
+        $names = ['Andre','Joao'];
+        return view('clients', compact('names'));
     }
      
 }
