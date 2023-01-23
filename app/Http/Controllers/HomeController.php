@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function energy(){
-        $energy = 8001;
-        return view('dbz', compact('energy'));
+    public function clientes(){
+        $clientes = ['Andre,','Joao'];
+        return view('clientes', compact('clientes'));
     }
      
 }

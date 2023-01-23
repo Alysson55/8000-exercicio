@@ -16,5 +16,5 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/energy', [HomeController::class, 'energy']);
-
+Route::get('/', [HomeController::class, 'clientes']);
 
