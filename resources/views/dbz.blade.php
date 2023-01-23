@@ -8,16 +8,11 @@
 </head>
 <body>
     <h1>
-        <form action="{{ route('checkenergy')}}" method="post">
-            @csrf
-            <label for="energy">Digite o valor de energia:</label>
-            <input type="number" name="energy" id="energy">
-            <button type="submit">Enviar</button>
-        </form>
-        
-        @if (isset($energy))
-            <p>{{ $energy }}</p>
-        @endif
+        @if($energy > 8000)
+        <h1>Mais de 8000!</h1>
+         @elseif($energy < 8000)
+        <h1>Inseto!</h1>
+    @endif
     </h1>
 </body>
 </html>

@@ -6,13 +6,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function checkEnergy(Request $request){
-        $energy = $request->input('energy');
-        if($energy > 8000){
-            $energy = "maior que 8000";
-        }else{
-            $energy = "inseto";
-        }
+    public function energy(){
+        $energy = 8001;
         return view('dbz', compact('energy'));
     }
+     
 }
