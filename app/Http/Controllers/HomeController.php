@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DbzController extends Controller
+class HomeController extends Controller
 {
     public function checkEnergy(Request $request){
         $energy = $request->input('energy');
         if($energy > 8000){
-            $message = "maior que 8000";
+            $energy = "maior que 8000";
         }else{
-            $message = "inseto";
+            $energy = "inseto";
         }
-        return view('dbz', compact('message'));
+        return view('dbz', compact('energy'));
     }
 }

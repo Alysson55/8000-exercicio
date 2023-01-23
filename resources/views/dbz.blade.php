@@ -8,15 +8,15 @@
 </head>
 <body>
     <h1>
-        <form action="{{ route('dbz.checkEnergy')}}" method="post">
+        <form action="{{ route('checkenergy')}}" method="post">
             @csrf
             <label for="energy">Digite o valor de energia:</label>
             <input type="number" name="energy" id="energy">
             <button type="submit">Enviar</button>
         </form>
         
-        @if (isset($message))
-            <p>{{ $message }}</p>
+        @if (isset($energy))
+            <p>{{ $energy }}</p>
         @endif
     </h1>
 </body>

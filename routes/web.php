@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DbzController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,9 @@ use App\Http\Controllers\DbzController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/dbz', function () {
+Route::get('/', function () {
     return view('dbz');
 });
-Route::post('/dbz', [DbzController::class, 'checkenergy'])->name('dbz.checkEnergy');
+Route::post('/', [HomeController::class, 'checkenergy'])->name('checkenergy');
 
 
